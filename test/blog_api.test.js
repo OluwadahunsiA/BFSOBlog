@@ -5,7 +5,6 @@ const Blog = require('../models/blog');
 
 const token = process.env.TEST_TOKEN;
 
-console.log(token);
 const testApi = supertest(app);
 
 const sampleBlogs = [
