@@ -3,8 +3,9 @@ const supertest = require('supertest');
 const app = require('../app');
 const Blog = require('../models/blog');
 
-const token =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpZCI6IjY1MjU1NWNkMmUyMmY2OTVlZGZjZTQxMyIsImlhdCI6MTY5Njk0NTY2N30.AbUY8_EPU0HowgcXkTH2RqXlpwnV4HQF9WexGXmSCE0';
+const token = process.env.TEST_TOKEN;
+
+console.log(token);
 const testApi = supertest(app);
 
 const sampleBlogs = [
