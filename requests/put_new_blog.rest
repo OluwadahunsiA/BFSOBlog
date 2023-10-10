@@ -1,0 +1,9 @@
+PUT http://localhost:3001/api/blogs/65171d99415c05e171ce7e78
+Content-Type: application/json
+
+{
+"title": "The second updated first blog of the day",
+"author": "Anthony Kreatin",
+"url": "www.google.com",
+"likes":9
+}

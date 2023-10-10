@@ -1,0 +1,10 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+  "title": "This blog's id is also saved to its user",
+  "author": "Anthony Nakamura Smith",
+  "url": "www.google.com",
+  "likes": 15,
+
+}
