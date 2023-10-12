@@ -32,15 +32,17 @@ blogsRouter.post('/', async (request, response, next) => {
       author: body.author,
       url: body.url,
       likes: body.likes || 0,
-      user: user.id,
+      user: user?.id,
     };
     const blog = new Blog(bodyMustHaveALikeValue);
 
     const savedBlog = await blog.save();
 
-    user.blogs = user.blogs.concat(savedBlog._id);
+    if (user) {
+      user.blogs = user.blogs.concat(savedBlog._id);
 
-    await user.save();
+      await user.save();
+    }
 
     response.status(201).json(savedBlog);
   } catch (error) {

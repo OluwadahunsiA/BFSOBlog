@@ -71,10 +71,11 @@ test('that the returned object has an id', async () => {
 
 test('that you can add a blog to the database', async () => {
   const newBlog = {
-    title: 'The next blog of the day',
+    title: 'Another blog by another person',
     author: 'Anthony Nakamura',
     url: 'www.google.com',
     likes: 110,
+    user: '652555cd2e22f695edfce413',
   };
 
   await testApi
@@ -115,7 +116,7 @@ test('that blog must have a like value', async () => {
     title: 'trial blog',
     author: 'trial author',
     url: 'trial.com',
-    user: '6523e0ecb5678345f2b8fc49',
+    user: '652555cd2e22f695edfce413',
   };
 
   await testApi
